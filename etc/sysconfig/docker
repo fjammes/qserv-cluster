@@ -1,0 +1,8 @@
+
+HTTPS_PROXY=http://134.158.239.70:3128
+HTTP_PROXY=http://134.158.239.70:3128
+
+export HTTPS_PROXY
+export HTTP_PROXY
+
+OPTIONS="--graph=/qserv/docker/runtime --tls=false" 
