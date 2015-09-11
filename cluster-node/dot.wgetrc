@@ -1,0 +1,5 @@
+http_proxy = http://134.158.239.70:3128/
+https_proxy = http://134.158.239.70:3128/
+ftp_proxy = http://134.158.239.70:3128/
+use_proxy = on
+wait = 15
