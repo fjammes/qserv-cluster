@@ -1,1 +1,7 @@
-OPTIONS="--graph=/qserv/docker/runtime --tls=false" 
+# /etc/sysconfig/docker
+#
+# Other arguments to pass to the docker daemon process
+# These will be parsed by the sysv initscript and appended
+# to the arguments list passed to docker daemon
+
+other_args="--graph=/qserv/docker/runtime" 
