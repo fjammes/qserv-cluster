@@ -1,0 +1,12 @@
+Manage sparse files during rsync Xfer:
+fjammes@ccqserv100:~$ ls -ls /qserv/data/zookeeper/version-2/ | head
+total 67728
+65540 -rw-r--r-x 1 qserv qserv 67108880 May  7 10:23 log.1*
+    8 -rw-r--r-x 1 qserv qserv 67108880 May 27 00:02 log.116*
+    8 -rw-r--r-x 1 qserv qserv 67108880 May 27 00:52 log.118*
+    8 -rw-r--r-x 1 qserv qserv 67108880 May 27 01:19 log.11b*
+    8 -rw-r--r-x 1 qserv qserv 67108880 May 27 01:28 log.11f*
+    8 -rw-r--r-x 1 qserv qserv 67108880 May 27 01:54 log.123*
+    8 -rw-r--r-x 1 qserv qserv 67108880 May 27 02:46 log.125*
+    8 -rw-r--r-x 1 qserv qserv 67108880 May 27 03:14 log.127*
+    8 -rw-r--r-x 1 qserv qserv 67108880 May 27 03:17 log.12b*
