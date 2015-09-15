@@ -14,6 +14,7 @@ func run_node(wg *sync.WaitGroup, cmd_str string, node int, origin int, data_dir
 	cmd.Env = append(os.Environ(), fmt.Sprintf("NODE=ccqserv%d", node))
 	cmd.Env = append(cmd.Env, fmt.Sprintf("ORIGIN=ccqserv%d", origin))
 	cmd.Env = append(cmd.Env, fmt.Sprintf("DATADIR=%v", data_dir))
+	fmt.Printf("env is: %s\n", cmd.Env)
 	fmt.Printf("command is: %s\n", cmd_str)
 	err := cmd.Run()
 	if err != nil {
@@ -30,10 +31,12 @@ func main() {
 	wg := new(sync.WaitGroup)
 
 	cmd_str_list := []string{
+/*
 		`ssh -K ${ORIGIN} "sudo -u qserv sh -c 'chmod -R o+rx ${DATADIR}'"`,
 		`ssh -K ${NODE} "sudo -u qserv sh -c \"mkdir -p ${DATADIR} && chmod -R o+w ${DATADIR} || echo 'Unable to chown '${DATADIR}\""`,
 		`ssh -K ${NODE} "rsync -e 'ssh -K' --delete -r ${USER}@${ORIGIN}.in2p3.fr:${DATADIR} /qserv/"`,
-		`ssh -K ${NODE} "sudo sh -c \"chown -R qserv:qserv ${DATADIR}\""`,
+*/
+		`ssh -K ${NODE} "echo "${PASSWORD}" | sudo -S sh -c \"chown -R qserv:qserv ${DATADIR}\""`,
 		`ssh -K ${NODE} "sudo -u qserv sh -c \"chmod -R o-w ${DATADIR}\""`,
 	}
 
