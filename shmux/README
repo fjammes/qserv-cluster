@@ -1,0 +1,5 @@
+sh hosts.sh | /opt/shmux/bin/shmux -c "echo \"$PASSWORD\" | sudo -S sh -c 'usermod -a  -G docker qserv'" -
+sh hosts.sh | /opt/shmux/bin/shmux -c "echo \"$PASSWORD\" | sudo -S sh -c 'mkdir -p /etc/systemd/system/docker.service.d'" -
+sh hosts.sh | /opt/shmux/bin/shmux -c "echo \"$PASSWORD\" | sudo -S sh -c 'cp ~fjammes/src/qserv-cluster/build-node/etc/systemd/system/docker.service.d/docker-opts.conf /etc/systemd/system/docker.service.d/'" -
+sh hosts.sh | /opt/shmux/bin/shmux -c "echo \"$PASSWORD\" | sudo -S sh -c 'cp ~fjammes/src/qserv-cluster/build-node/etc/sysconfig/docker /etc/sysconfig/'" -
+sh hosts.sh | /opt/shmux/bin/shmux -c "echo \"$PASSWORD\" | sudo -S sh -c 'systemctl daemon-reload && systemctl restart docker'" -
