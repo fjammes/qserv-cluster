@@ -1,5 +1,6 @@
-sh hosts.sh | /opt/shmux/bin/shmux -c "echo \"$PASSWORD\" | sudo -S sh -c 'usermod -a  -G docker qserv'" -
-sh hosts.sh | /opt/shmux/bin/shmux -c "echo \"$PASSWORD\" | sudo -S sh -c 'mkdir -p /etc/systemd/system/docker.service.d'" -
-sh hosts.sh | /opt/shmux/bin/shmux -c "echo \"$PASSWORD\" | sudo -S sh -c 'cp ~fjammes/src/qserv-cluster/build-node/etc/systemd/system/docker.service.d/docker-opts.conf /etc/systemd/system/docker.service.d/'" -
-sh hosts.sh | /opt/shmux/bin/shmux -c "echo \"$PASSWORD\" | sudo -S sh -c 'cp ~fjammes/src/qserv-cluster/build-node/etc/sysconfig/docker /etc/sysconfig/'" -
-sh hosts.sh | /opt/shmux/bin/shmux -c "echo \"$PASSWORD\" | sudo -S sh -c 'systemctl daemon-reload && systemctl restart docker'" -
+perms.sh: add qserv in docker group (should be performed by puppet)
+conf.sh: update docker configuration (add proxy and change runtime directory)
+pull.sh: retrieve docker images on all nodes
+
+workers.sh: print workers list
+hosts.sh: print nodes list
