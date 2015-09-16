@@ -1,6 +1,5 @@
 perms.sh: add qserv in docker group (should be performed by puppet)
 conf.sh: update docker configuration (add proxy and change runtime directory)
 pull.sh: retrieve docker images on all nodes
-
-workers.sh: print workers list
-hosts.sh: print nodes list
+run.sh: run qserv docker containers on all nodes
+ps.sh: show docker containers state on all nodes
