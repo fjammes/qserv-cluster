@@ -1,3 +1,4 @@
+# PRE-REQUISITE: run 'changesh bash' on ccage
 set -e
 set -x
 
