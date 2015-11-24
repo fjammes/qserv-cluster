@@ -9,3 +9,8 @@ set -x
     -p 1094:1094 -p 5012:5012 \
     fjammes/qserv:worker-ccqserv125.in2p3.fr \
     > qserv.out 2> qserv.err < /dev/null &"' ccqserv{126..127}.in2p3.fr
+
+CSS_CODE='CREATE NODE worker2 type=worker port=5012 host=ccqserv127.in2p3.fr;'
+/opt/shmux/bin/shmux -c "sudo -u qserv sh -c \"docker exec qserv bash -c '. /qserv/stack/loadLSST.bash && \
+    setup qserv_distrib && \
+    echo \'$CSS_CODE\' | qserv-admin.py'\"" ccqserv125.in2p3.fr

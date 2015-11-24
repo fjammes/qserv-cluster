@@ -9,4 +9,4 @@ HTTP_PROXY=http://134.158.239.70:3128
 export HTTPS_PROXY
 export HTTP_PROXY
 
-other_args="--graph=/qserv/docker/runtime" 
+other_args="--graph=/qserv/docker/runtime -s overlay"
