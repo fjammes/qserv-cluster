@@ -1,0 +1,5 @@
+[2015-11-24T15:06:09.049Z] [0x7ffbd5c8a740] WARN  root (core/modules/wdb/ChunkResource.cc:295) - memLockStatus unexpected results, assuming LOCKED_OTHER. err=Error 0: Expecting one row, found no rows
+
+[2015-11-24T15:06:09.049Z] [0x7ffbd5c8a740] WARN  root (core/modules/wdb/ChunkResource.cc:317) - Memory tables were not released cleanly! LockStatus=LOCKED_OTHER
+[2015-11-24T15:06:09.049Z] [0x7ffbd5c8a740] DEBUG root (core/modules/wdb/ChunkResource.cc:273) - execLockSql CREATE DATABASE IF NOT EXISTS q_memoryLockDb;CREATE TABLE IF NOT EXISTS q_memoryLockDb.memoryLockTbl (
+ keyId INT UNIQUE, uid INT ) ENGINE = MEMORY;
