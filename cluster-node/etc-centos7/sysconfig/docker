@@ -9,5 +9,5 @@ HTTP_PROXY=http://134.158.239.70:3128
 export HTTPS_PROXY
 export HTTP_PROXY
 
-GRAPH=--graph=/qserv/docker/runtime
-BACKEND=--storage-driver=overlay
+GRAPH="--graph=/qserv/docker/runtime"
+BACKEND="--storage-driver=devicemapper"
