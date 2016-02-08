@@ -1,0 +1,13 @@
+#
+# Other arguments to pass to the docker daemon process
+# These will be parsed by the sysv initscript and appended
+# to the arguments list passed to docker daemon
+
+HTTPS_PROXY=http://134.158.239.70:3128
+HTTP_PROXY=http://134.158.239.70:3128
+
+export HTTPS_PROXY
+export HTTP_PROXY
+
+GRAPH=--graph=/qserv/docker/runtime
+BACKEND=--storage-driver=overlay
