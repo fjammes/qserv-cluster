@@ -1,5 +1,6 @@
 DOCKER_USER=qserv
 MASTER=ccqserv125.in2p3.fr
-BRANCH=tickets_DM-2699
+BRANCH=dev
 MASTER_IMAGE="$DOCKER_USER/qserv:${BRANCH}_master_$MASTER"
 WORKER_IMAGE="$DOCKER_USER/qserv:${BRANCH}_worker_$MASTER"
+CONTAINER_NAME=qserv_dev
