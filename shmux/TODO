@@ -1,0 +1,4 @@
+- add graceful stop script
+- remove result/message tables/QMeta at startup?
+- re-install docker images from scratch
+- update doc (add vaikunth pull.sh remark)
