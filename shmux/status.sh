@@ -1,1 +1,7 @@
-/opt/shmux/bin/shmux -c "hostname" ccqserv{125..149}.in2p3.fr 
+#!/bin/bash
+
+set -e
+
+. ./env.sh
+
+/opt/shmux/bin/shmux -c "docker ps --filter name=${CONTAINER_NAME} | grep ${CONTAINER_NAME}" "$MASTER" $WORKERS
