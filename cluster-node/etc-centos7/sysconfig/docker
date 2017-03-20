@@ -11,3 +11,5 @@ export HTTP_PROXY
 
 GRAPH="--graph=/qserv/docker/runtime"
 BACKEND="--storage-driver=devicemapper"
+MIRROR="--registry-mirror=http://ccqservreg.in2p3.fr:5000"
+INSECURE_MIRROR="--insecure-registry=http://ccqservreg.in2p3.fr:5000"
